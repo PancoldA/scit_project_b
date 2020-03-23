@@ -4,7 +4,9 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
+		<typeAlias type="global.sesoc.wareware.vo.User" alias="User"/>
 	</typeAliases>
 	<mappers>
+		<mapper resource="mapper/userMapper.xml" />
 	</mappers>
 </configuration>

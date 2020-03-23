@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="global.sesoc.wareware.dao.UserMapper">
+<!-- 일반 회원가입 -->
+<insert id="join_insert" parameterType="User">
+	insert into user_table
+		(
+			user_id, authorization_id, user_email, user_password
+			, user_name, user_create_date, user_modify_date, helper
+		)
+	values
+		(
+			user_seq.nextval, #{authorization_id}, #{user_email}, #{user_password}, #{user_name}, sysdate
+			, sysdate, #{helper}
+		)
+</insert>
+<!-- SNS 회원가입 -->
+<insert id="snsjoin_insert" parameterType="User">
+	insert into user_table
+		(
+			user_id, authorization_id, user_email, user_password, user_name, user_create_date
+			, user_modify_date, user_emailauthkey, helper, sns_key, sns_type
+		)
+	values
+		(
+			user_seq.nextval, #{authorization_id}, #{user_email}, #{user_password}, #{user_name}, sysdate
+			, sysdate, '', '', #{sns_key}, #{sns_type}
+		)
+</insert>
+<!-- 유저 정보  -->
+<select id="user_info" resultType="User" >
+	select * from user_table 
+	where user_email = #{user_email}
+</select>
+
+<!-- 닉네임 수정  -->
+<update id="name_modify" parameterType="User" >
+update user_table set user_name = #{user_name} , user_modify_date = sysdate where user_email = #{user_email}
+</update>
+
+<!-- 이메일 중복 체크-->
+<select id="emailchk" resultType="INT" parameterType="User">
+	select count(*) from user_table where user_email = #{user_email}
+</select>
+
+<!-- 로그인  -->
+<select id="login" resultType="INT" parameterType="User" >
+select count(*) from user_table where user_email = #{user_email} and user_password = #{user_password}
+</select>
+
+<!-- 등급확인 -->
+<select id="gradechk" resultType="INT" parameterType="User">
+select authorization_id from user_table where user_email = #{user_email}
+</select>
+
+<!-- sns으로 가입한 회원인지 확인  -->
+<select id="snschk" resultType="INT"  parameterType="String">
+select count(sns_type) from user_table where user_email = #{user_email}
+</select>
+
+<!-- sns 타입 확인 -->
+<select id="snstype" resultType="String"  parameterType="User">
+select sns_type from user_table where user_email = #{user_email}
+</select>
+
+<!-- 인증키 체크 -->
+<select id="keychk" resultType="INT" parameterType="User">
+select count(*) from user_table where user_email = #{user_email} AND user_emailauthkey = #{key}	
+</select>
+
+<!-- 인증키 재인증을 위해 초기화 업데이트 -->
+<update id="upkey"  parameterType="User">
+update user_table set user_emailauthkey = #{key} where user_email = #{user_email} 
+</update>
+
+<!-- 인증 ok -->
+<update id="auth_ok" parameterType="User">
+	update user_table set authorization_id = '4' where user_email = #{user_email}
+</update>
+
+<!-- 인증 후 이메일 인증키 제거 -->
+<update id="auth_null" parameterType="User">
+	update user_table set user_emailauthkey = '' where user_email = #{user_email}
+</update>
+
+<!-- helper 호출 -->
+<select id="getsalt" resultType="String" parameterType="User">
+select helper from user_table where user_email = #{user_email}
+</select>
+
+<!-- 비밀번호 수정 -->
+<update id="pw_modify" parameterType="User">
+update user_table set user_password = #{user_password} , helper = #{helper}  where user_email = #{user_email} 
+</update>
+
+<!-- 닉네임 확인 -->
+<select id="getname" resultType="String" parameterType="User">
+select user_name from user_table where user_email = #{user_email}
+</select>
+
+<!-- user_id 확인 -->
+<select id="get_userid" resultType="String" parameterType="User">
+select user_id from user_table where user_email = #{user_email}
+</select>
+
+<!-- 닉네임체크-->
+<select id="namechk" resultType="INT" parameterType="User">
+	select count(*) from user_table where user_name = #{user_name}
+</select>
+</mapper>
