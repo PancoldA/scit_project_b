@@ -25,71 +25,62 @@
 
 	<div id="page-wrapper">
 	
-	<!-- Header -->
+		<!-- Header -->
+		
 		<header id="header" class="alt">
 		
 			<h1><a href="index">wareware</a> by wareware</h1>
-			
 			<nav id="nav">
 				<ul>
 					<li><a href="index.html">Home</a></li>
+					<li><a href="#">Self Analysis</a></li>
+					<li><a href="#">News Analysis</a></li>
 					<li>
-						<a href="#" class="icon solid fa-angle-down">Layouts</a>
+						<a href="myPage" class="icon solid fa-angle-down">MyPage</a>
 						<ul>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="contact.html">Contact</a></li>
-							<li><a href="elements.html">Elements</a></li>
-							<li>
-								<a href="#">Submenu</a>
-								<ul>
-									<li><a href="#">Option One</a></li>
-									<li><a href="#">Option Two</a></li>
-									<li><a href="#">Option Three</a></li>
-									<li><a href="#">Option Four</a></li>
-								</ul>
-							</li>
+							<li><a href="generic.html">my profile</a></li>
+							<li><a href="contact.html">my resume</a></li>
 						</ul>
 					</li>
-					<li><a href="#" class="button">Sign Up</a></li>
+					<li><a href="login" class="button">Login</a></li>
+					<li><a href="logout" class="button">Logout</a></li>
 				</ul>
 			</nav>
 		
 		</header>
 	
 		<!-- Banner -->
-				<section id="banner">
-					<h2>Alpha</h2>
-					<p>Another fine responsive site template freebie by HTML5 UP.</p>
-					<ul class="actions special">
-						<li><a href="#" class="button primary">Sign Up</a></li>
-						<li><a href="#" class="button">Learn More</a></li>
-					</ul>
-				</section>
-	
-				<section id="main" class="container">
+		
+		<section id="banner">
+			<h2>WAREWARE</h2>
+			<h3>자신의 프로필 및 자소서 분석 통한 채용 공고 추천<br/>최신 기업 동향을 뉴스 검색을 통해 알아보세요</h3>
+			<ul class="actions special">
+				<li><a href="#" class="button primary">Start Self Analysis</a></li>
+			</ul>
+		</section>
+			
+		<section id="main" class="container">
 
-					<section class="box special">
-						<header class="major">
-							<h2>Introducing the ultimate mobile app
-							<br />
-							for doing stuff with your phone</h2>
-							<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
-							adipiscing nunc adipiscing. Condimentum turpis massa.</p>
-						</header>
-						<span class="image featured"><img src="resources/images/pic01.jpg" alt="" /></span>
-					</section>
+			<section class="box special">
+				<header class="major">
+					<h2>Introducing the ultimate mobile app<br />for doing stuff with your phone</h2>
+					<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
+					adipiscing nunc adipiscing. Condimentum turpis massa.</p>
+				</header>
+				<!-- <span class="image featured"><img src="resources/images/pic01.jpg" alt="" /></span> -->
+			</section>
 
 					<section class="box special features">
 						<div class="features-row">
 							<section>
-								<span class="icon solid major fa-bolt accent2"></span>
-								<h3>Magna etiam</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+								<span class="icon solid major fa-bolt accent6"></span>
+								<h3>1단계. 프로필 정보 대조</h3>
+								<p>자신이 등록한 프로필과 조건이 맞는 채용 공고 선별</p>
 							</section>
 							<section>
 								<span class="icon solid major fa-chart-area accent3"></span>
-								<h3>Ipsum dolor</h3>
-								<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+								<h3>2단계. 자기 소개서 분석</h3>
+								<p>자기 소개서의 핵심 키워드와 채용 공고의 핵심 키워드 비교 분석을을 통한 순위 매김</p>
 							</section>
 						</div>
 						<div class="features-row">
