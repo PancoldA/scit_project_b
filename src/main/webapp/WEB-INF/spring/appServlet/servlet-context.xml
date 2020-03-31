@@ -23,6 +23,8 @@
 	
 	<context:component-scan base-package="global.sesoc.wareware" />
 	
-	
+	<!-- NaverLoginBO Class에 대한 Bean설정 추가 -->
+	<beans:bean id="naverLoginBO" class="global.sesoc.wareware.controllers.NaverLoginBO" />
+
 	
 </beans:beans>
