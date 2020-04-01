@@ -3,6 +3,8 @@ package global.sesoc.wareware.controllers;
 import java.io.IOException;
 import java.util.UUID;
 import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import com.github.scribejava.core.builder.ServiceBuilder;
 import com.github.scribejava.core.model.OAuth2AccessToken;
@@ -10,6 +12,8 @@ import com.github.scribejava.core.model.OAuthRequest;
 import com.github.scribejava.core.model.Response;
 import com.github.scribejava.core.model.Verb;
 import com.github.scribejava.core.oauth.OAuth20Service;
+
+@Component
 public class NaverLoginBO {
 	
 	/* 인증 요청문을 구성하는 파라미터 */
