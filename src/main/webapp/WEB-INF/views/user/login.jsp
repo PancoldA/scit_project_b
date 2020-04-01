@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
+<!-- 상태표시줄 로고 -->
+<head>
+<link rel="shortcut icon" type="image⁄x-icon" href="resources/images/logo.png">
+</head>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -55,8 +60,15 @@
 							<li><a href="contact.html">my resume</a></li>
 						</ul>
 					</li>
-					<li><a href="login" class="button">Login</a></li>
-					<li><a href="logout" class="button">Logout</a></li>
+					<c:choose>
+						<c:when test="${sessionId != null}">
+						<li>${sessionId}님 반갑습니다!</li>
+						<li><a href="logout" class="button">Logout</a></li>
+						</c:when>
+						<c:otherwise>
+							<li><a href="login" class="button">Login</a></li>
+						</c:otherwise>
+					</c:choose>
 				</ul>
 			</nav>
 		</header>
@@ -87,7 +99,9 @@
 				</form>
 			</div>
 			<div class="box">
-				api 로그인 버튼이 들어가는 부분
+				<!-- 네이버 로그인 창으로 이동 -->
+				<div id="naver_id_login" style="text-align:center"><a href="${url}">
+				<img width="223" src="https://developers.naver.com/doc/review_201802/CK_bEFnWMeEBjXpQ5o8N_20180202_7aot50.png"/></a></div>
 			</div>
 		</section>
 
