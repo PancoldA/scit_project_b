@@ -174,6 +174,7 @@
 
 	</div>
 	
+	<script src="resources/js/jquery-3.4.1.min.js"></script>
 	<script src="resources/js/jquery.dropotron.min.js"></script>
 	<script src="resources/js/jquery.scrollex.min.js"></script>
 	<script src="resources/js/browser.min.js"></script>
