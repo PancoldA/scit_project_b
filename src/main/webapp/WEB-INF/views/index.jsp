@@ -37,14 +37,14 @@
 			<h1><a href="index">wareware</a> by wareware</h1>
 			<nav id="nav">
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="#">Self Analysis</a></li>
+					<li><a href="index">Home</a></li>
+					<li><a href="posting">Self Analysis</a></li>
 					<li><a href="#">News Analysis</a></li>
 					<li>
 						<a href="myPage" class="icon solid fa-angle-down">MyPage</a>
 						<ul>
-							<li><a href="generic.html">my profile</a></li>
-							<li><a href="contact.html">my resume</a></li>
+							<li><a href="generic">my profile</a></li>
+							<li><a href="contact">my resume</a></li>
 						</ul>
 					</li>
 					<c:choose>
@@ -67,7 +67,7 @@
 			<h2>WAREWARE</h2>
 			<h3>자신의 프로필 및 자소서 분석 통한 채용 공고 추천<br/>최신 기업 동향을 뉴스 검색을 통해 알아보세요</h3>
 			<ul class="actions special">
-				<li><a href="#" class="button primary">Start Self Analysis</a></li>
+				<li><a href="posting" class="button primary">Start Self Analysis</a></li>
 			</ul>
 		</section>
 			
