@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.github.scribejava.core.model.OAuth2AccessToken;
 
+import global.sesoc.wareware.api.NaverLoginBO;
 import global.sesoc.wareware.dao.UserDAO;
 import global.sesoc.wareware.vo.User;
 

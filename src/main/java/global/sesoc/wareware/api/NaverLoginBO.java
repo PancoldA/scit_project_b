@@ -1,4 +1,4 @@
-package global.sesoc.wareware.controllers;
+package global.sesoc.wareware.api;
 
 import java.io.IOException;
 import java.util.UUID;
