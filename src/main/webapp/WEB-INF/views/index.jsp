@@ -8,8 +8,8 @@
 </head>
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<title>wareware : index</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>WAREWARE</title>
 	
 	<script src="resources/js/jquery-3.4.1.min.js"></script>
 	<link rel="stylesheet" href="resources/css/main.css" />
@@ -38,7 +38,7 @@
 			<nav id="nav">
 				<ul>
 					<li><a href="index">Home</a></li>
-					<li><a href="posting">Self Analysis</a></li>
+					<li><a href="posting">Job Explorer</a></li>
 					<li><a href="#">News Analysis</a></li>
 					<li>
 						<a href="myPage" class="icon solid fa-angle-down">MyPage</a>
@@ -65,9 +65,9 @@
 		
 		<section id="banner">
 			<h2>WAREWARE</h2>
-			<h3>자신의 프로필 및 자소서 분석 통한 채용 공고 추천<br/>최신 기업 동향을 뉴스 검색을 통해 알아보세요</h3>
+			<h3>자신의 프로필 및 관심사에 맞는 채용 공고 추천<br/>최신 기업 동향을 뉴스 검색을 통해 알아보세요</h3>
 			<ul class="actions special">
-				<li><a href="posting" class="button primary">Start Self Analysis</a></li>
+				<li><a href="posting" class="button primary">Try it now</a></li>
 			</ul>
 		</section>
 			

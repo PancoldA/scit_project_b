@@ -22,6 +22,12 @@ public class HomeController {
 		return "index";
 	}
 	
+	@GetMapping(value = "/posting")
+	public String posting() {
+		logger.info("HomeController's GET index Method");
+		return "posting/posting";
+	}
+	
 	//연락관련 템플릿
 	@GetMapping(value = "/contact")
 	public String contact() {
