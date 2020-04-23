@@ -14,15 +14,32 @@
 	<script src="resources/js/jquery-3.4.1.min.js"></script>
 	<link rel="stylesheet" href="resources/css/main.css" />
 	
+	<c:if test="${not empty naver_message}">
+	<script type="text/javascript">
+		alert("${naver_message}");
+	</script>
+	</c:if>
+	
 	<script type="text/javascript">
 
 		$(document).ready({
 
-			
-				
+
 		});
 
 	</script>
+	
+	<style>
+	
+ 		#wareware_icon {
+		
+			width : 100px;
+		
+		
+		} 
+	
+	
+	</style>
 	
 </head>
 
@@ -34,10 +51,10 @@
 		
 		<header id="header" class="alt">
 		
-			<h1><a href="index">wareware</a> by wareware</h1>
+			<h1><a href="index"><span class="image fit"><img id="wareware_icon" src="resources/images/icons/wareware_icon.png"></span></a></h1>
 			<nav id="nav">
 				<ul>
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index">Home</a></li>
 					<li><a href="#">Self Analysis</a></li>
 					<li><a href="#">News Analysis</a></li>
 					<li>
@@ -48,12 +65,12 @@
 						</ul>
 					</li>
 					<c:choose>
-						<c:when test="${sessionId != null}">
-						<li>${sessionId}님 반갑습니다!</li>
+						<c:when test="${sessionScope.sessionId != null}">
+						<li>${sessionScope.sessionId}님 반갑습니다!</li>
 						<li><a href="logout" class="button">Logout</a></li>
 						</c:when>
 						<c:otherwise>
-							<li><a href="login" class="button">Login</a></li>
+							<li><a href="login" class="button">Login / SignUp</a></li>
 						</c:otherwise>
 					</c:choose>
 				</ul>
@@ -79,7 +96,7 @@
 					<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc ornare<br />
 					adipiscing nunc adipiscing. Condimentum turpis massa.</p>
 				</header>
-				<!-- <span class="image featured"><img src="resources/images/pic01.jpg" alt="" /></span> -->
+				<span class="image featured"><img src="resources/images/wareware_image.png" alt="" /></span>
 			</section>
 
 					<section class="box special features">

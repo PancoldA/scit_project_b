@@ -1,4 +1,4 @@
-package global.sesoc.wareware.controllers;
+package global.sesoc.wareware.service;
 
 import com.github.scribejava.core.builder.api.DefaultApi20;
 
