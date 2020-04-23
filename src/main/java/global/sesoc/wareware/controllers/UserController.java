@@ -22,8 +22,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.github.scribejava.core.model.OAuth2AccessToken;
 
+import global.sesoc.wareware.api.NaverLoginBO;
 import global.sesoc.wareware.dao.UserDAO;
-import global.sesoc.wareware.service.NaverLoginBO;
 import global.sesoc.wareware.vo.User;
 
 @Controller

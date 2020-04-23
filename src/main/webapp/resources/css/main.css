@@ -249,7 +249,8 @@
 	.align-right {
 		text-align: right;
 	}
-
+	
+	
 /* Row */
 
 	.row {
@@ -261,6 +262,10 @@
 
 		.row > * {
 			box-sizing: border-box;
+		}
+		
+		.row > :last-child > :last-child {
+			margin-bottom: 0;
 		}
 
 		.row.gtr-uniform > * > :last-child {
@@ -492,7 +497,23 @@
 				.row.gtr-200.gtr-uniform > * {
 					padding-top: 4em;
 				}
-
+			
+			.row.job-category {
+				margin-top: 1em;
+			}
+			
+			.row.job-category span {
+				font-size: 0.7em;
+				color: #949494;
+			}
+			
+			.row.job-condition {
+				margin-top: -0.5em;
+			}
+			
+			.row.job-condition span {
+				font-size: 0.8em;
+			}
 		@media screen and (max-width: 1680px) {
 
 			.row {
@@ -1994,7 +2015,11 @@
 		.container.max {
 			width: 100%;
 		}
-
+		
+		.container > .row {
+			margin-bottom: 2em;
+		}
+		
 		@media screen and (max-width: 840px) {
 
 			.container {
@@ -2760,7 +2785,15 @@
 		text-decoration: none;
 		white-space: nowrap;
 	}
-
+	
+	.button.small.more {
+		vertical-align: text-bottom;
+		font-size: 0.7em;
+		height: 2.0em;
+		line-height: 2.0em;
+		padding: 0 1em;
+	}
+	
 		input[type="submit"]:hover,
 		input[type="reset"]:hover,
 		input[type="button"]:hover,

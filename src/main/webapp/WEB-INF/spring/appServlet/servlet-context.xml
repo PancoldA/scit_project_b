@@ -30,7 +30,7 @@
 		base-package="global.sesoc.wareware" />
 
 	<!-- NaverLoginBO Class에 대한 Bean설정 추가 -->
-	<beans:bean id="naverLoginBO" class="global.sesoc.wareware.service.NaverLoginBO" />
+	<beans:bean id="naverLoginBO" class="global.sesoc.wareware.api.NaverLoginBO" />
 
 
 </beans:beans>

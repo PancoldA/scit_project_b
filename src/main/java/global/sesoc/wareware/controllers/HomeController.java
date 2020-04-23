@@ -22,4 +22,37 @@ public class HomeController {
 		return "index";
 	}
 	
+	@GetMapping(value = "/posting")
+	public String posting() {
+		logger.info("HomeController's GET index Method");
+		return "posting/posting";
+	}
+	
+	//연락관련 템플릿
+	@GetMapping(value = "/contact")
+	public String contact() {
+		logger.info("HomeController's GET index Method");
+		return "temp/contact";
+	}
+	
+	//여러가지 요소관련 템플릿
+	@GetMapping(value = "/elements")
+	public String elements() {
+		logger.info("HomeController's GET index Method");
+		return "temp/elements";
+	}
+	
+	//문서관련 템플릿
+	@GetMapping(value = "/generic")
+	public String generic() {
+		logger.info("HomeController's GET index Method");
+		return "temp/generic";
+	}
+	
+	//메인화면 관련 템플릿
+	@GetMapping(value = "/gindex")
+	public String gindex() {
+		logger.info("HomeController's GET index Method");
+		return "temp/Gindex";
+	}
 }
