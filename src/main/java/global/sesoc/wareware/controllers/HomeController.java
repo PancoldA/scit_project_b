@@ -15,13 +15,7 @@ public class HomeController {
 		logger.info("HomeController's GET index Method");
 		return "index";
 	}
-	
-	@GetMapping(value = "/index")
-	public String index02() {
-		logger.info("HomeController's GET index Method");
-		return "index";
-	}
-	
+		
 	@GetMapping(value = "/posting")
 	public String posting() {
 		logger.info("HomeController's GET index Method");

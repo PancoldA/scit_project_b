@@ -9,29 +9,21 @@
 		<title>WAREWARE : 채용공고 추천</title>
 		<script src="resources/js/jquery-3.4.1.min.js"></script>
 		<link rel="stylesheet" href="resources/css/main.css">
-		<style>
-	
-		i {
-		
-			color : #e89980;
-		
-		}
-		
-		#wareware_icon {
-		
-			width : 120px;
-		
-		}
-	
+		<link rel="shortcut icon" type="image⁄x-icon" href="resources/images/icons/logo.png">
+		<style>	
+		i {		
+			color : #e89980;		
+		}		
 		</style>
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
 			<header id="header">
-				<h1><a href="index"><img id="wareware_icon" class="image fit" src="resources/images/icons/wareware_icon.png"></a></h1>
+				<h1><a href="/wareware/"><span class="image fit"><img id="wareware_icon" src="resources/images/icons/wareware_icon.png"></span></a></h1>
 				<nav id="nav">
 					<ul>
-						<li><a href="index">Home</a></li>
+						<li><a href="/wareware/">Home</a></li>
+						<li><a href="#">Self Analysis</a></li>
 						<li><a href="posting">Job Explorer</a></li>
 						<li><a href="#">News Analysis</a></li>
 						<li>
@@ -56,7 +48,7 @@
 			<section id="main" class="container">
 				<header>
 					<h2>Job Explorer</h2>
-					<p>프로필과 관심사를 통해 채용공고를 추천해드립니다.</p>
+					<p>관심사를 통해 채용공고를 추천해드립니다.</p>
 				</header>
 				<div class="row">
 					<div class="col-12">
@@ -232,16 +224,8 @@
 				</div>
 			</section>
 			<footer id="footer">
-				<ul class="icons">
-					<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-					<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-					<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-					<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-				</ul>
 				<ul class="copyright">
-					<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					<li>Copyright &copy; WAREWARE. All rights reserved.</li>
 				</ul>
 			</footer>
 		</div>
