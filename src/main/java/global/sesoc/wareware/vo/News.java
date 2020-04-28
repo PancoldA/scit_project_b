@@ -13,5 +13,6 @@ public class News {
 	private int sentiment;
 	private String company;
 	private String imgurl;
+	private String linkurl;
 	
 }

@@ -3,15 +3,15 @@
 
 <mapper namespace="global.sesoc.wareware.mappers.NewsMapper">
 <select id="getDate" parameterType="map" resultType="News">
-select * from news2 where newsdate = #{newsdate}
+select * from news where newsdate = #{newsdate}
 </select>
 
 <select id="getPopular" parameterType="map" resultType="News">
-select * from news2 where popular = #{popular} 
+select * from news where popular = #{popular} 
 </select>
 
 <select id="searchFromWord" parameterType="map" resultType="News">
-select * from news2 where (article||subject)
+select * from news where (article||subject)
 like '%'||#{searchWord}||'%'
 order by newsno desc
 </select>
