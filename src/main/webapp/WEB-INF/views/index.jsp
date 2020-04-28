@@ -8,7 +8,7 @@
 		<title>WAREWARE</title>
 		<script src="resources/js/jquery-3.4.1.min.js"></script>
 		<link rel="stylesheet" href="resources/css/main.css">
-		<link rel="shortcut icon" type="image⁄x-icon" href="resources/images/icons/logo.png">
+		<link rel="shortcut icon" type="image⁄x-icon" href="resources/images/icons/wareware_icon.png">
 		<c:if test="${not empty naver_message}">
 			<script type="text/javascript">
 				alert("${naver_message}");

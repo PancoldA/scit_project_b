@@ -4,7 +4,7 @@
 <html>
 <!-- 상태표시줄 로고 -->
 <head>
-<link rel="shortcut icon" type="image⁄x-icon" href="resources/images/logo.png">
+<link rel="shortcut icon" type="image⁄x-icon" href="resources/images/icons/wareware_icon.png">
 </head>
 <head>
 
@@ -227,7 +227,7 @@
 		<!-- Header -->
 		
 		<header id="header">
-			<h1><a href="index"><img id="wareware_icon" class="image fit" src="resources/images/icons/wareware_icon.png"></a></h1>
+			<h1><a href="/wareware/"><img id="wareware_icon" class="image fit" src="resources/images/icons/wareware_icon.png"></a></h1>
 			<nav id="nav">
 				<ul>
 					<li><a href="index">Home</a></li>
