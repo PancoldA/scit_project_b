@@ -54,7 +54,7 @@
 						<li>
 							<a href="myPage" class="icon solid fa-angle-down">MyPage</a>
 							<ul>
-								<li><a href="generic">my profile</a></li>
+								<li><a href="resumeList">resume list</a></li>
 								<li><a href="contact">my resume</a></li>
 							</ul>
 						</li>

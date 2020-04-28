@@ -89,7 +89,7 @@
 						<li>
 							<a href="myPage" class="icon solid fa-angle-down">MyPage</a>
 							<ul>
-								<li><a href="generic">my profile</a></li>
+								<li><a href="resumeList">resume list</a></li>
 								<li><a href="contact">my resume</a></li>
 							</ul>
 						</li>
@@ -129,6 +129,11 @@
 				<div class="box">
 					<textarea id="resume" name="resume_content" rows="20" readonly="readonly" style="resize:none;">${resume_content}</textarea>
 				</div>
+				
+				<ul class="actions special">
+					<li><a href="resumeList" class="button">목록으로</a></li>
+				</ul>
+				
 			</section>
 			<footer id="footer">
 				<ul class="copyright">

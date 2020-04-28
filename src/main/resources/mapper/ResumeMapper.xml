@@ -3,6 +3,82 @@
 
 <mapper namespace="global.sesoc.wareware.mappers.ResumeMapper">
 
+	<!-- 이력서 등록 하기 -->
+	<insert id="insertResume" parameterType="Resume">
+	
+		INSERT INTO
+			userresume
+		(
+			resume_no
+			, user_email
+			, resume_title
+			, resume_content
+			, category_list
+			, resume_regist_date
+			
+		) VALUES (
+		
+			SEQ_userresume_resumeno.nextval
+			, #{user_email}
+			, #{resume_title}
+			, #{resume_content}
+			, #{category_list}
+			, sysdate
+		
+		)
+		
+	</insert>
+	
+	<!-- 자소서 리스트 가져오기 -->
+	<select id="resumeList" parameterType="Resume" resultType="Resume">
+	
+		SELECT
+			*
+		FROM
+			userresume
+		WHERE
+			user_email = #{user_email}
+	
+	</select>
+	
+	<!-- 자소서 하나 가져오기 -->
+	<select id="selectOne" parameterType="int" resultType="Resume">
+	
+		SELECT
+			*
+		FROM
+			userresume
+		WHERE
+			resume_no = #{resume_no}
+	
+	</select>
+	
+	<!-- 자소서 하나 지우기 -->
+	<delete id="deleteResume" parameterType="int">
+	
+		DELETE FROM
+			userresume
+		WHERE
+			resume_no = #{resume_no}
+	
+	</delete>
+	
+	<!-- 자소서 수정 -->
+	<update id="updateResume" parameterType="Resume">
+	
+		UPDATE
+			userresume
+		SET
+			resume_title = #{resume_title}
+			, resume_content = #{resume_content}
+			, category_list = #{category_list}
+			, resume_modify_date = sysdate
+		WHERE
+			resume_no = #{resume_no}
+	
+	
+	</update>
+
 	<!-- 카테고리 워드 리스트 -->
 	<select id="getList" parameterType="String" resultType="String">
 	
@@ -43,6 +119,7 @@
 	
 	</select>
 	
+	<!-- 카테고리 추가 -->
 	<insert id="insertCategory" parameterType="Category">
 		
 		INSERT INTO

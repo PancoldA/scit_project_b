@@ -4,17 +4,13 @@
 
 <html>
 
-	<!-- 상태표시줄 로고 -->
-	
-	<head>
-		<link rel="shortcut icon" type="image⁄x-icon" href="resources/images/logo.png">
-	</head>
-	
 	<head>
 		<title>WAREWARE : MyPage</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="resources/css/main.css" />
+		<script src="resources/js/jquery-3.4.1.min.js"></script>
+		<link rel="shortcut icon" type="image⁄x-icon" href="resources/images/icons/wareware_icon.png">
 		<style type="text/css">
 	
 			#wareware_icon {
@@ -30,35 +26,33 @@
 	
 		<!-- Header -->
 		
-		<header id="header" class="alt">
-		
-			<h1><a href="index"><span class="image fit"><img id="wareware_icon" src="resources/images/icons/wareware_icon.png"></span></a></h1>
-			<nav id="nav">
-				<ul>
-					<li><a href="index">Home</a></li>
-					<li><a href="resumeHome">Self Analysis</a></li>
-					<li><a href="posting">Job Explorer</a></li>
-					<li><a href="#">News Analysis</a></li>
-					<li>
-						<a href="myPage" class="icon solid fa-angle-down">MyPage</a>
-						<ul>
-							<li><a href="generic">my profile</a></li>
-							<li><a href="contact">my resume</a></li>
-						</ul>
-					</li>
-					<c:choose>
-						<c:when test="${sessionScope.sessionId != null}">
-						<li>${sessionScope.sessionId}님 반갑습니다!</li>
-						<li><a href="logout" class="button">Logout</a></li>
-						</c:when>
-						<c:otherwise>
-							<li><a href="login" class="button">Login / SignUp</a></li>
-						</c:otherwise>
-					</c:choose>
-				</ul>
-			</nav>
-		
-		</header>
+		<header id="header">
+				<h1><a href="/wareware/"><span class="image fit"><img id="wareware_icon" src="resources/images/icons/wareware_icon.png"></span></a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="/wareware/">Home</a></li>
+						<li><a href="resumeHome">Self Analysis</a></li>
+						<li><a href="posting">Job Explorer</a></li>
+						<li><a href="news_sentiment">News Analysis</a></li>
+						<li>
+							<a href="myPage" class="icon solid fa-angle-down">MyPage</a>
+							<ul>
+								<li><a href="resumeList">resume list</a></li>
+								<li><a href="contact">my resume</a></li>
+							</ul>
+						</li>
+						<c:choose>
+							<c:when test="${sessionScope.sessionId != null}">
+								<li>${sessionScope.sessionId}님 반갑습니다!</li>
+								<li><a href="logout" class="button">Logout</a></li>
+							</c:when>
+							<c:otherwise>
+								<li><a href="login" class="button">Login / Sign Up</a></li>
+							</c:otherwise>
+						</c:choose>
+					</ul>
+				</nav>
+			</header>
 
 			<!-- Banner -->
 				<section id="banner">
@@ -140,37 +134,11 @@
 
 				</section>
 
-			<!-- CTA -->
-				<section id="cta">
-
-					<h2>Sign up for beta access</h2>
-					<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>
-
-					<form>
-						<div class="row gtr-50 gtr-uniform">
-							<div class="col-8 col-12-mobilep">
-								<input type="email" name="email" id="email" placeholder="Email Address" />
-							</div>
-							<div class="col-4 col-12-mobilep">
-								<input type="submit" value="Sign Up" class="fit" />
-							</div>
-						</div>
-					</form>
-
-				</section>
-
 			<!-- Footer -->
+			
 				<footer id="footer">
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-					</ul>
 					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>Copyright &copy; WAREWARE. All rights reserved.</li>
 					</ul>
 				</footer>
 
@@ -178,7 +146,6 @@
 
 		<!-- Scripts -->
 		
-		<script src="resources/js/jquery-3.4.1.min.js"></script>
 		<script src="resources/js/jquery.dropotron.min.js"></script>
 		<script src="resources/js/jquery.scrollex.min.js"></script>
 		<script src="resources/js/browser.min.js"></script>

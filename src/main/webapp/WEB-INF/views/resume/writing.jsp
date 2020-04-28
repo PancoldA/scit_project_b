@@ -12,7 +12,7 @@
 		<script type="text/javascript">
 			$(document).ready(function(){
 
-				$("#resume").on("keyup", function(){
+				$("#resume_content").on("keyup", function(){
 
 					var text = "";
 					var resume = $(this).val();
@@ -34,8 +34,10 @@
 
 			function save() {
 
-				var resume_content = $("#resume").val();
-				var data = {"resume_content" : resume_content};
+				var resume_content = $("#resume_content").val();
+				var resume_title = $("#resume_title").val();
+				var category_list =  $("input:radio[name='category_type']:checked").val();
+				var data = {"resume_title" : resume_title , "resume_content" : resume_content , "category_list" : category_list };
 				
 				$.ajax({
 
@@ -43,6 +45,16 @@
 					, url : "saveResume"
 					, data : data
 					, success : function(response){
+
+						if(response == "success") {
+
+							var result = confirm("저장이 완료되었습니다. 계속 진행하시려면 '예'를, 아니면 '아니오'를 눌러주세요.");
+
+							if(!result)
+								window.location.replace("/wareware/resumeList");
+								
+						}
+						
 					}
 					, error : function(response){
 					}
@@ -53,7 +65,7 @@
 
 			function analysis() {
 
-				var resume_content = $("#resume").val();
+				var resume_content = $("#resume_content").val();
 				var category_type =  $("input:radio[name='category_type']:checked").val();
 
 				if(resume_content.trim().length < 300) {
@@ -90,7 +102,7 @@
 						<li>
 							<a href="myPage" class="icon solid fa-angle-down">MyPage</a>
 							<ul>
-								<li><a href="generic">my profile</a></li>
+								<li><a href="resumeList">resume list</a></li>
 								<li><a href="contact">my resume</a></li>
 							</ul>
 						</li>
@@ -124,7 +136,11 @@
 						<label for="leadership">주체지향</label>
 					</div>
 					<div class="box">
-						<textarea id="resume" name="resume_content" rows="20" style="resize:none;">
+						<div class="col-12">
+							<input type="text" id="resume_title" name="resume_title" placeholder="title">
+						</div>
+						<hr>
+						<textarea id="resume_content" name="resume_content" rows="20" style="resize:none;">
 						</textarea>
 						<div class="col-12">
 							<p id="textLength">0 / 1000</p>

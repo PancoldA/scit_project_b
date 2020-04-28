@@ -22,4 +22,16 @@ public interface ResumeMapper {
 	// 카테고리 추가
 	public void insertCategory(Category category);
 
+	// 자소서 리스트 가져오기
+	public List<Resume> resumeList(Resume resume);
+
+	// 하나의 자소서 가져오기
+	public Resume selectOne(int resume_no);
+
+	// 하나의 자소서 지우기
+	public int deleteResume(int resume_no);
+
+	// 자소서 수정
+	public int updateResume(Resume resume);
+
 }

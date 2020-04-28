@@ -7,7 +7,9 @@ public class Resume {
 
 	private int resume_no;
 	private String user_email;
+	private String resume_title;
 	private String resume_content;
+	private String category_list;
 	private String resume_regist_date;
 	private String resume_modify_date;
 

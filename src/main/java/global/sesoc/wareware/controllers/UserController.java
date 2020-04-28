@@ -85,6 +85,7 @@ public class UserController {
 
 				}
 
+				session.setAttribute("session_email",selected.getUser_email());
 				logger.info(selected.toString());
 				return "redirect:/";
 
@@ -163,6 +164,7 @@ public class UserController {
 			// 네이버로 DB가 존재할 경우
 			if (select.getUser_sns_type() == "naver") {
 
+				session.setAttribute("session_email", naver_email);
 				session.setAttribute("sessionId", select.getUser_name());
 				return "redirect:/";
 
@@ -178,6 +180,7 @@ public class UserController {
 				select.setUser_sns_type("naver");
 
 				int result = dao.updateUser(select);
+				session.setAttribute("session_email", naver_email);
 				session.setAttribute("sessionId", naver_name);
 
 				if (result > 0) {
@@ -204,11 +207,13 @@ public class UserController {
 			dao.insertUser(user);
 
 			session.setAttribute("sessionId", user.getUser_name());
+			session.setAttribute("session_email", naver_email);
 
 			return "redirect:/";
 
 		}
 
+		session.setAttribute("session_email", naver_email);
 		session.setAttribute("sessionId", naver_name);
 		return "redirect:/";
 

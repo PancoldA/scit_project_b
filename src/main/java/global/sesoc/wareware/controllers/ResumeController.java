@@ -18,6 +18,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import global.sesoc.wareware.api.GsonRankApi;
 import global.sesoc.wareware.api.TFIDFCalculator;
@@ -45,19 +46,71 @@ public class ResumeController {
 		return "resume/writing";
 	}
 
+	@ResponseBody
 	@PostMapping("/saveResume")
 	public String saveResume(Resume resume, HttpSession session) {
 		logger.info("ResumeController's POST saveResume Method");
 
-		String user_email = (String) session.getAttribute("loginId");
+		String user_email = (String) session.getAttribute("session_email");
 		resume.setUser_email(user_email);
 
 		int result = dao.insertResume(resume);
 
 		if (result > 0)
-			return "redirect:/resumeList";
+			return "success";
 		else
-			return "";
+			return "fail";
+	}
+
+	@GetMapping("/resumeList")
+	public String resumeList() {
+		logger.info("ResumeController's GET resumeList Method");
+		return "resume/resumeList";
+	}
+
+	@ResponseBody
+	@PostMapping("/resumeList")
+	public List<Resume> resumeListPrint(HttpSession session) {
+		logger.info("ResumeController's POST resumeListPrint Method");
+
+		Resume resume = new Resume();
+		resume.setUser_email((String) session.getAttribute("session_email"));
+
+		List<Resume> list = dao.resumeList(resume);
+
+		return list;
+	}
+	
+	@GetMapping("/resumePrint")
+	public String resumePrint(int resume_no, Model model) {
+		logger.info("ResumeController's GET resumePrint Method");
+		
+		Resume resume = dao.selectOne(resume_no);
+		model.addAttribute("resume", resume);
+		
+		return "resume/resumePrint";
+	}
+	
+	@GetMapping("/deleteResume")
+	public String deleteResume(int resume_no) {
+		logger.info("ResumeController's GET deleteResume Method");
+		
+		dao.deleteResume(resume_no);
+		
+		return "redirect:/resumeList";
+	}
+	
+	@ResponseBody
+	@PostMapping("/updateResume")
+	public String updateResume(Resume resume) {
+		logger.info("ResumeController's POST updateResume Method");
+		
+		int result = dao.updateResume(resume);
+		
+		if(result > 0)
+			return "success";
+		else
+			return "fail";
 	}
 
 	@PostMapping("/analysisResume")
