@@ -39,8 +39,7 @@
 				<ul>
 					<li><a href="index">Home</a></li>
 					<li><a href="posting">Job Explorer</a></li>
-					<li><a href="news_sentiment">News Analysis</a></li>
-					<li><a href="practice">Youtube Analysis</a></li>
+					<li><a href="#">News Analysis</a></li>
 					<li>
 						<a href="myPage" class="icon solid fa-angle-down">MyPage</a>
 						<ul>
