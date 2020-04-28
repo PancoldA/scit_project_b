@@ -18,7 +18,7 @@
 				<nav id="nav">
 					<ul>
 						<li><a href="/wareware/">Home</a></li>
-						<li><a href="#">Self Analysis</a></li>
+						<li><a href="resumeHome">Self Analysis</a></li>
 						<li><a href="posting">Job Explorer</a></li>
 						<li><a href="news_sentiment">News Analysis</a></li>
 						<li>
