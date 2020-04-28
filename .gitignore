@@ -3,3 +3,4 @@ target/
 .project
 .classpath
 .springBeans
+.sts4-cache

@@ -3290,7 +3290,7 @@
 
 	#footer {
 		background: #f0f0f0;
-		padding: 4em 0 6em 0;
+		padding: 1em 0 1em 0;
 		text-align: center;
 	}
 
@@ -3398,7 +3398,72 @@
 		#cta .formerize-placeholder {
 			color: rgba(255, 255, 255, 0.75) !important;
 		}
-
+		
+		/* Solutions */
+		
+		#solutions { 
+		  font-family: Agenda-Light, Agenda Light, Agenda, Arial Narrow, sans-serif;
+		  font-weight:100; 
+		  background: rgba(0,0,0,0.3);
+		  color: white;
+		  padding: 2rem;
+		  width: 33%;
+		  float: right;
+		  font-size: 1.2rem;
+		  position: absolute;
+		  z-index: 999;
+		  top: 50%;
+		  width: 100%;
+		}
+		
+		#solutions section {
+			display: inline-block;
+			margin-right: 1em;
+		}
+		
+		#solutions .features-row {
+			text-align: center;
+		}
+		
+		#solutions h3 {
+			color: white;
+		}
+		
+		/* Video */
+		
+		#video {
+		    position: relative;
+		    background-color: black;
+		    height: 63vh;
+		    min-height: 25rem;
+		    width: 100%;
+		    overflow: hidden;
+		}
+		
+		#video video {
+  			position: fixed;
+  			right: 0;
+  			bottom: 0;
+  			min-width: 100%;
+  			min-height: 100%;
+		}
+		
+		#video .overlay {
+		    position: fixed;
+		    top: 0;
+		    left: 0;
+		    height: 100%;
+		    width: 100%;
+		    background-color: black;
+		    opacity: 0.5;
+		    z-index: 1;
+		}
+		
+		/* Wareware's banner */
+		#wareware_icon {
+			width : 100px;
+		}
+		 
 /* Wide */
 
 	@media screen and (max-width: 1680px) {
