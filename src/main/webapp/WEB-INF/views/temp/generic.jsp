@@ -9,6 +9,7 @@
 		<title>Generic - Alpha by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<script src="resources/js/jquery-3.4.1.min.js"></script>
 		<link rel="stylesheet" href="resources/css/main.css" />
 	</head>
 	<body class="is-preload">
@@ -83,7 +84,7 @@
 		</div>
 
 		<!-- Scripts -->
-			<script src="resources/js/jquery-3.4.1.min.js"></script>
+			
 			<script src="resources/js/jquery.dropotron.min.js"></script>
 			<script src="resources/js/jquery.scrollex.min.js"></script>
 			<script src="resources/js/browser.min.js"></script>

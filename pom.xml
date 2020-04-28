@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>global.sesoc</groupId>
 	<artifactId>wareware</artifactId>
@@ -201,24 +199,31 @@
 		</dependency>
 
 		<!-- 메일 인증 끝 -->
-				
-		<!-- 한글분석- 워드클라우드준비-->
+
+		<!-- 한글분석- 워드클라우드준비 -->
 		<dependency>
-		    <groupId>com.twitter</groupId>
-		    <artifactId>twitter-text</artifactId>
-		    <version>1.11.1</version>
+			<groupId>com.twitter</groupId>
+			<artifactId>twitter-text</artifactId>
+			<version>1.11.1</version>
 		</dependency>
 		<dependency>
-		   <groupId>com.twitter.penguin</groupId>
-		   <artifactId>korean-text</artifactId>
-		   <version>4.4</version>
+			<groupId>com.twitter.penguin</groupId>
+			<artifactId>korean-text</artifactId>
+			<version>4.4</version>
 		</dependency>
 		<dependency>
-		    <groupId>org.scala-lang</groupId>
-		    <artifactId>scala-library</artifactId>
-		    <version>2.11.4</version>
+			<groupId>org.scala-lang</groupId>
+			<artifactId>scala-library</artifactId>
+			<version>2.11.4</version>
 		</dependency>
-		
+
+		<!-- 자연어처리를 위한 Json Parsing Gson Library -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.6</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>

@@ -21,6 +21,12 @@ public class HomeController {
 		logger.info("HomeController's GET index Method");
 		return "posting/posting";
 	}
+		
+	@GetMapping(value = "/myPage")
+	public String myPage() {
+		logger.info("HomeController's GET myPage Method");
+		return "user/myPage";
+	}
 	
 	//연락관련 템플릿
 	@GetMapping(value = "/contact")

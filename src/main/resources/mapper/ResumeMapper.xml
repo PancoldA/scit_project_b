@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="global.sesoc.wareware.mappers.ResumeMapper">
+
+	<!-- 카테고리 워드 리스트 -->
+	<select id="getList" parameterType="String" resultType="String">
+	
+		SELECT
+			category_word
+		FROM
+			categoryinfo
+		WHERE
+			category_list = #{category_list}
+	
+	</select>
+	
+	<!-- 단어 언급 횟수 업데이트 -->
+	<update id="updateCategory" parameterType="Category">
+	
+		UPDATE
+			categoryinfo
+		SET
+			category_count = category_count + 1
+		WHERE
+			category_list = #{category_list}
+		AND
+			category_word = #{category_word}
+	
+	</update>
+	
+	<!-- 카테고리 리스트 안에 일치하는 단어가 있는지 조사 -->
+	<select id="selectCategoryCnt" parameterType="Category" resultType="int">
+	
+		SELECT
+			COUNT(*)
+		FROM
+			categoryinfo
+		WHERE
+			category_list = #{category_list}
+		AND
+			category_word = #{category_word}
+	
+	</select>
+	
+	<insert id="insertCategory" parameterType="Category">
+		
+		INSERT INTO
+			categoryinfo
+		(
+			category_no
+			, category_list
+			, category_word
+			, category_count
+		
+		) VALUES (
+		
+			SEQ_categoryInfo_category_no.nextval
+			, #{category_list}
+			, #{category_word}
+			, 1
+		
+		)
+			
+	</insert>
+	
+</mapper>
