@@ -135,7 +135,7 @@
 			</connections>
 			<display>false</display>
 			<creation_date>2020-04-23 18:34:29</creation_date>
-			<updated_date>2020-04-23 18:36:25</updated_date>
+			<updated_date>2020-04-27 14:55:42</updated_date>
 			<model_property>
 				<name>프로젝트명</name>
 				<value></value>
@@ -683,7 +683,7 @@
 			</color>
 			<connections>
 			</connections>
-			<physical_name>new</physical_name>
+			<physical_name>news</physical_name>
 			<logical_name>기업 뉴스</logical_name>
 			<description></description>
 			<constraint></constraint>
@@ -1544,7 +1544,7 @@
 					<default_value></default_value>
 					<auto_increment>false</auto_increment>
 					<foreign_key>false</foreign_key>
-					<not_null>true</not_null>
+					<not_null>false</not_null>
 					<primary_key>false</primary_key>
 					<unique_key>false</unique_key>
 					<character_set></character_set>
@@ -1577,7 +1577,7 @@
 					<default_value></default_value>
 					<auto_increment>false</auto_increment>
 					<foreign_key>false</foreign_key>
-					<not_null>true</not_null>
+					<not_null>false</not_null>
 					<primary_key>false</primary_key>
 					<unique_key>false</unique_key>
 					<character_set></character_set>
@@ -1922,6 +1922,21 @@
 			<data_type></data_type>
 			<decimal_size>0</decimal_size>
 		</sequence>
+		<sequence>
+			<name>SEQ_news_newsno</name>
+			<schema></schema>
+			<increment>1</increment>
+			<min_value></min_value>
+			<max_value></max_value>
+			<start>1</start>
+			<cache></cache>
+			<nocache>false</nocache>
+			<cycle>false</cycle>
+			<order>false</order>
+			<description></description>
+			<data_type></data_type>
+			<decimal_size>0</decimal_size>
+		</sequence>
 	</sequence_set>
 	<trigger_set>
 		<trigger>
@@ -1964,6 +1979,12 @@
 			<name>TRI_userresume_resume_no</name>
 			<schema></schema>
 			<sql>BEFORE INSERT ON userresume&#x0D;&#x0A;FOR EACH ROW&#x0D;&#x0A;BEGIN&#x0D;&#x0A;&#x09;SELECT SEQ_userresume_resume_no.nextval&#x0D;&#x0A;&#x09;INTO :new.resume_no&#x0D;&#x0A;&#x09;FROM dual;&#x0D;&#x0A;END</sql>
+			<description></description>
+		</trigger>
+		<trigger>
+			<name>TRI_news_newsno</name>
+			<schema></schema>
+			<sql>BEFORE INSERT ON news&#x0D;&#x0A;FOR EACH ROW&#x0D;&#x0A;BEGIN&#x0D;&#x0A;&#x09;SELECT SEQ_news_newsno.nextval&#x0D;&#x0A;&#x09;INTO :new.newsno&#x0D;&#x0A;&#x09;FROM dual;&#x0D;&#x0A;END</sql>
 			<description></description>
 		</trigger>
 	</trigger_set>

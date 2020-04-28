@@ -28,7 +28,7 @@
 			, password
 			, user_regist_date
 			<!-- sns 회원일 경우 -->
-			<if test="snstype != null">
+			<if test="user_sns_type != null">
 			, user_sns_key
 			, user_sns_type
 			</if>

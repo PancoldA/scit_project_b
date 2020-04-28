@@ -28,13 +28,11 @@
 			color : #e89980;
 		
 		}
-		
+
 		#wareware_icon {
-		
-			width : 120px;
-		
-		}
-	
+			width : 100px !important;
+		} 
+
 	</style>
 	
 	<script>
@@ -75,8 +73,9 @@
 			<h1><a href="index"><img id="wareware_icon" class="image fit" src="resources/images/icons/wareware_icon.png"></a></h1>
 			<nav id="nav">
 				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="#">Self Analysis</a></li>
+					<li><a href="index">Home</a></li>
+					<li><a href="resumeHome">Self Analysis</a></li>
+					<li><a href="posting">Job Explorer</a></li>
 					<li><a href="#">News Analysis</a></li>
 					<li>
 						<a href="myPage" class="icon solid fa-angle-down">MyPage</a>

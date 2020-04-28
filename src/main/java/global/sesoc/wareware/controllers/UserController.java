@@ -195,6 +195,7 @@ public class UserController {
 			String gender = (String) response_obj.get("gender");
 			String snsKey = (String) response_obj.get("id");
 
+			user.setPassword("");
 			user.setUser_name(naver_name);
 			user.setUser_gender(gender);
 			user.setUser_sns_key(snsKey);
