@@ -6,15 +6,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">	
-		<title>WAREWARE : 채용공고 추천</title>
+		<title>WAREWARE - Job Explorer</title>
 		<script src="resources/js/jquery-3.4.1.min.js"></script>
 		<link rel="stylesheet" href="resources/css/main.css">
-		<link rel="shortcut icon" type="image⁄x-icon" href="resources/images/icons/logo.png">
-		<style>	
-		i {		
-			color : #e89980;		
-		}		
-		</style>
+		<link rel="shortcut icon" type="image⁄x-icon" href="resources/images/icons/wareware_icon.png">
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -25,7 +20,7 @@
 						<li><a href="/wareware/">Home</a></li>
 						<li><a href="#">Self Analysis</a></li>
 						<li><a href="posting">Job Explorer</a></li>
-						<li><a href="#">News Analysis</a></li>
+						<li><a href="news_sentiment">News Analysis</a></li>
 						<li>
 							<a href="myPage" class="icon solid fa-angle-down">MyPage</a>
 							<ul>
@@ -39,7 +34,7 @@
 								<li><a href="logout" class="button">Logout</a></li>
 							</c:when>
 							<c:otherwise>
-								<li><a href="login" class="button">Login / SignUp</a></li>
+								<li><a href="login" class="button">Login / Sign Up</a></li>
 							</c:otherwise>
 						</c:choose>
 					</ul>
@@ -48,7 +43,7 @@
 			<section id="main" class="container">
 				<header>
 					<h2>Job Explorer</h2>
-					<p>관심사를 통해 채용공고를 추천해드립니다.</p>
+					<p>관심사를 통해 채용공고를 추천해드립니다</p>
 				</header>
 				<div class="row">
 					<div class="col-12">

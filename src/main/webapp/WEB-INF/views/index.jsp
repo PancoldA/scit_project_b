@@ -64,7 +64,7 @@
 							<li><a href="logout" class="button">Logout</a></li>
 							</c:when>
 							<c:otherwise>
-								<li><a href="login" class="button">Login / SignUp</a></li>
+								<li><a href="login" class="button">Login / Sign Up</a></li>
 							</c:otherwise>
 						</c:choose>
 					</ul>
