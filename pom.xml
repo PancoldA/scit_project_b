@@ -201,7 +201,24 @@
 		</dependency>
 
 		<!-- 메일 인증 끝 -->
-
+				
+		<!-- 한글분석- 워드클라우드준비-->
+		<dependency>
+		    <groupId>com.twitter</groupId>
+		    <artifactId>twitter-text</artifactId>
+		    <version>1.11.1</version>
+		</dependency>
+		<dependency>
+		   <groupId>com.twitter.penguin</groupId>
+		   <artifactId>korean-text</artifactId>
+		   <version>4.4</version>
+		</dependency>
+		<dependency>
+		    <groupId>org.scala-lang</groupId>
+		    <artifactId>scala-library</artifactId>
+		    <version>2.11.4</version>
+		</dependency>
+		
 	</dependencies>
 	<build>
 		<plugins>
