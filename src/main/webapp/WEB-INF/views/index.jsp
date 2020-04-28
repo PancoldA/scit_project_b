@@ -50,7 +50,7 @@
 						<li><a href="/wareware/">Home</a></li>
 						<li><a href="#">Self Analysis</a></li>
 						<li><a href="posting">Job Explorer</a></li>
-						<li><a href="#">News Analysis</a></li>
+						<li><a href="news_sentiment">News Analysis</a></li>
 						<li>
 							<a href="myPage" class="icon solid fa-angle-down">MyPage</a>
 							<ul>

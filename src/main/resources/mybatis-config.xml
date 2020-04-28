@@ -4,9 +4,11 @@
 	<typeAliases>
 		<typeAlias type="global.sesoc.wareware.vo.User" alias="User"/>
 		<typeAlias type="global.sesoc.wareware.vo.Posting" alias="posting"/>
+		<typeAlias type="global.sesoc.wareware.vo.News" alias="News"/>
 	</typeAliases>
 	<mappers>
 		<mapper resource="mapper/UserMapper.xml" />
 		<mapper resource="mapper/PostingMapper.xml" />
+		<mapper resource="mapper/NewsMapper.xml" />
 	</mappers>
 </configuration>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="global.sesoc.wareware.mappers.NewsMapper">
+<select id="getDate" parameterType="map" resultType="News">
+select * from news2 where newsdate = #{newsdate}
+</select>
+
+<select id="getPopular" parameterType="map" resultType="News">
+select * from news2 where popular = #{popular} 
+</select>
+
+<select id="searchFromWord" parameterType="map" resultType="News">
+select * from news2 where (article||subject)
+like '%'||#{searchWord}||'%'
+order by newsno desc
+</select>
+</mapper>
