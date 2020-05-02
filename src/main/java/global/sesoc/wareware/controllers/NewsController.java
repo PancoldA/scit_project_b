@@ -41,14 +41,7 @@ public class NewsController {
 		
 		return "news/news_sentiment";
 	}
-	
-	@GetMapping(value = "/practice")
-	public String practice() {
 		
-		return "news/practice";
-	}
-	
-	
 	@ResponseBody
 	@GetMapping(value = "getDate")
 	public List<News> getDate(@RequestParam(value = "newsdate", defaultValue = "20200419") String newsdate){

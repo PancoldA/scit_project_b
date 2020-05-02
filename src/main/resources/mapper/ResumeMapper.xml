@@ -18,7 +18,7 @@
 			
 		) VALUES (
 		
-			SEQ_userresume_resumeno.nextval
+			SEQ_userresume_resume_no.nextval
 			, #{user_email}
 			, #{resume_title}
 			, #{resume_content}
