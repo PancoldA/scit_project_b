@@ -237,9 +237,12 @@ public class UserController {
 	// 이메일 중복 체크 메소드
 	@ResponseBody
 	@PostMapping("/emailCheck")
-	public String emailCheck(User user) {
+	public String emailCheck(String user_email) {
 		logger.info("UserController's POST emailCheck Method");
-		logger.info("email : " + user.getUser_email());
+		logger.info("email : " + user_email);
+		
+		User user = new User();
+		user.setUser_email(user_email);
 
 		User result = dao.selectOne(user);
 

@@ -258,8 +258,7 @@
 						<li>
 							<a href="myPage" class="icon solid fa-angle-down">MyPage</a>
 							<ul>
-								<li><a href="generic">my profile</a></li>
-								<li><a href="contact">my resume</a></li>
+								<li><a href="resumeList">my profile</a></li>
 							</ul>
 						</li>
 						<c:choose>

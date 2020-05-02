@@ -49,10 +49,9 @@
 						<li><a href="posting">Job Explorer</a></li>
 						<li><a href="news_sentiment">News Analysis</a></li>
 						<li>
-							<a href="myPage" class="icon solid fa-angle-down">MyPage</a>
+							<a href="#" class="icon solid fa-angle-down">MyPage</a>
 							<ul>
 								<li><a href="resumeList">resume list</a></li>
-								<li><a href="contact">my resume</a></li>
 							</ul>
 						</li>
 						<c:choose>

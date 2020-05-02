@@ -70,23 +70,23 @@
 						, data : data
 						, success : function(response){
 
-							if(response == "success") {
+							if(response == "success") 
+								alert("저장에 성공했습니다.");
+							else 
+								alert("저장에 실패했습니다.");
 
-								var result = confirm("저장이 완료되었습니다. 계속 진행하시려면 '예'를, 아니면 '아니오'를 눌러주세요.");
-
-								if(!result)
-									window.location.replace("/wareware/resumeList");
-								else
-									$("#changeB").html("수정");
-									
-							}
-							
 						}
 						, error : function(response){
+							alert("updateResume Error!");
 						}
 						
 					});
 
+					$("#changeB").html("수정");
+					$("input[type='radio']").attr("onclick", "return(false)");
+					$("#resume_title").attr("readonly", "readonly");
+					$("#resume_content").attr("readonly", "readonly");
+					
 				}
 				
 
@@ -111,10 +111,9 @@
 						<li><a href="posting">Job Explorer</a></li>
 						<li><a href="news_sentiment">News Analysis</a></li>
 						<li>
-							<a href="myPage" class="icon solid fa-angle-down">MyPage</a>
+							<a href="#" class="icon solid fa-angle-down">MyPage</a>
 							<ul>
 								<li><a href="resumeList">resume list</a></li>
-								<li><a href="contact">my resume</a></li>
 							</ul>
 						</li>
 						<c:choose>

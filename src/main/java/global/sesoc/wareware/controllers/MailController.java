@@ -23,7 +23,7 @@ public class MailController {
 	private static final Logger logger = LoggerFactory.getLogger(MailController.class);
 
 	@PostMapping("/mailSend")
-	public String mailSend(String email) {
+	public String mailSend(String user_email) {
 
 		logger.info("MailRestContoller's GET mailSend Method");
 		
@@ -44,7 +44,7 @@ public class MailController {
 		try {
 
 			message.setFrom("scitproject001@gmail.com");
-			message.addRecipient(RecipientType.TO, new InternetAddress(email));
+			message.addRecipient(RecipientType.TO, new InternetAddress(user_email));
 			message.setSubject("We are Team Wareware! Thanks for join us!");
 			message.setText(text, "utf-8", "html");
 			mailSender.send(message);
