@@ -99,12 +99,14 @@
 						<li><a href="resumeHome">Self Analysis</a></li>
 						<li><a href="posting">Job Explorer</a></li>
 						<li><a href="news_sentiment">News Analysis</a></li>
+						<c:if test="${sessionScope.sessionId != null}">
 						<li>
 							<a href="#" class="icon solid fa-angle-down">MyPage</a>
 							<ul>
 								<li><a href="resumeList">resume list</a></li>
 							</ul>
 						</li>
+						</c:if>
 						<c:choose>
 							<c:when test="${sessionScope.sessionId != null}">
 								<li>${sessionScope.sessionId}님 반갑습니다!</li>
@@ -147,7 +149,9 @@
 					</div>
 				</form>
 				<ul class="actions special">
+					<c:if test="${sessionScope.sessionId != null}">
 					<li><a href="javascript:void(0);" onclick="save();" class="button">저장</a></li>
+					</c:if>
 					<li><a href="javascript:void(0);" onclick="analysis();" class="button">분석</a></li>
 				</ul>
 			</section>

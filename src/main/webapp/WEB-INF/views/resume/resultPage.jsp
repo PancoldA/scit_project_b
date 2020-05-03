@@ -86,12 +86,14 @@
 						<li><a href="resumeHome">Self Analysis</a></li>
 						<li><a href="posting">Job Explorer</a></li>
 						<li><a href="news_sentiment">News Analysis</a></li>
+						<c:if test="${sessionScope.sessionId != null}">
 						<li>
 							<a href="#" class="icon solid fa-angle-down">MyPage</a>
 							<ul>
 								<li><a href="resumeList">resume list</a></li>
 							</ul>
 						</li>
+						</c:if>
 						<c:choose>
 							<c:when test="${sessionScope.sessionId != null}">
 								<li>${sessionScope.sessionId}님 반갑습니다!</li>
@@ -130,7 +132,14 @@
 				</div>
 				
 				<ul class="actions special">
+				<c:choose>
+					<c:when test="${sessionScope.sessionId != null}">
 					<li><a href="resumeList" class="button">목록으로</a></li>
+					</c:when>
+					<c:otherwise>
+					<li><a href="/wareware/" class="button">홈으로</a></li>
+					</c:otherwise>
+				</c:choose>
 				</ul>
 				
 			</section>

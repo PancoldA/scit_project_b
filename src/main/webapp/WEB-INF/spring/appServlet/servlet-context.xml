@@ -25,6 +25,17 @@
 	
 	<!-- NaverLoginBO Class에 대한 Bean설정 추가 -->
 	<beans:bean id="naverLoginBO" class="global.sesoc.wareware.api.NaverLoginBO" />
-
 	
+	<!-- 인터셉터 클래스를 빈으로 등록 -->
+	<beans:bean id="loginInterceptor" class="global.sesoc.wareware.interceptor.LoginInterceptor" />
+
+	<!-- 인터셉터를 경유해야하는 경로들을 지정 -->
+	<interceptors>
+		<interceptor>
+			<mapping path="/resumeList"/>
+			<mapping path="/resumePrint"/>
+			<beans:ref bean="loginInterceptor" />
+		</interceptor>
+	</interceptors>
+
 </beans:beans>
